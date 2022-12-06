@@ -47,7 +47,7 @@ class PostController extends Controller
             'category_id' => $request->input('category_id'),
         ]);
 
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index')->with('status', 'The post created successfully.');
     }
 
     /**
@@ -89,7 +89,7 @@ class PostController extends Controller
             'category_id' => $request->input('category_id'),
         ]);
 
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index')->with('edit', 'The post edited successfully.');
     }
 
     /**
@@ -102,6 +102,6 @@ class PostController extends Controller
     {
         $post->delete();
 
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index')->with('delete', 'The post deleted successfully.');
     }
 }

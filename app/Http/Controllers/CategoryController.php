@@ -41,7 +41,7 @@ class CategoryController extends Controller
             'name' => $request->input('name')
         ]);
 
-        return redirect()->route('categories.index')->with('status', 'The post created successfully.');
+        return redirect()->route('categories.index')->with('status', 'The category created successfully.');
     }
 
     /**
@@ -79,7 +79,7 @@ class CategoryController extends Controller
             'name' => $request->input('name')
         ]);
 
-        return redirect()->route('categories.index')->with('edit', 'The post edited successfully.');
+        return redirect()->route('categories.index')->with('edit', 'The category edited successfully.');
     }
 
     /**
@@ -92,6 +92,6 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return redirect()->route('categories.index')->with('delete', 'The post deleted successfully.');
+        return redirect()->route('categories.index')->with('delete', 'The category deleted successfully.');
     }
 }
