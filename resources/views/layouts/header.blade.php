@@ -58,14 +58,28 @@
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+    <div :class="{'block': open, 'hidden': ! open}" class=" sticky hidden sm:hidden">
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">
                 <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+            </div><hr>
+            <div class="mt-3 space-y-1">
+                <li class="{{ (request()->segment(1) == 'dashboard') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-10 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
+					<span class="font-semibold"><a href="{{ route('dashboard') }}"><i class="fa fa-home"></i> Dashboard</a></span>
+				</li>
+				@if (auth()->user()->is_admin)
+				<li class="{{ (request()->segment(1) == 'categories') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-10 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
+					<span class="font-semibold"><a href="{{ route('categories.index') }}"><i class="fa fa-th-list"></i> Categories</a></span>
+				</li>
+				<li class="{{ (request()->segment(1) == 'posts') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-10 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
+					<span class="font-semibold"><a href="{{ route('posts.index') }}"><i class="fa fa-square-o"></i> Posts</a></span>
+				</li>
+				@endif
             </div>
+
 
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile.edit')">
