@@ -9,7 +9,7 @@
 
         @vite('resources/css/app.css')
 
-        <script src="sweetalert2.all.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
 
         <!-- font-awesome icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,22 +21,13 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.header')
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+        <div class="min-h-screen bg-gray-100">           
 
             @include('layouts.navbar')
             <!-- Page Content -->
             <main>
             </main>
         </div>
+        <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
     </body>
 </html>
