@@ -7,13 +7,13 @@
 					<span class="font-semibold"><a href="{{ route('dashboard') }}"><i class="fa fa-home"></i> Dashboard</a></span>
 				</li>
 				@if (auth()->user()->is_admin)
-				<li class="{{ (request()->segment(1) == 'categories') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-10 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
+				<li class="{{ (request()->segment(1) == 'categories') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-5 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
 					<span class="font-semibold"><a href="{{ route('categories.index') }}"><i class="fa fa-th-list"></i> Categories</a></span>
 				</li>
-				<li class="{{ (request()->segment(1) == 'posts') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-10 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
+				<li class="{{ (request()->segment(1) == 'posts') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-5 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
 					<span class="font-semibold"><a href="{{ route('posts.index') }}"><i class="fa fa-square-o"></i> Posts</a></span>
 				</li>
-				<li class="{{ (request()->segment(1) == 'users') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-10 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
+				<li class="{{ (request()->segment(1) == 'users') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-5 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
 					<span class="font-semibold"><a href="{{ route('users.index') }}"><i class="fa fa-square-o"></i> Users</a></span>
 				</li>
 				@endif
