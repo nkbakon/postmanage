@@ -1,12 +1,12 @@
 <x-app-layout>
-    <div class="py-12">
+    <div class="py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <h5 class="font-bold text-center text-black">Dashboard</h5>
-                    <div id="piechart" style="width: 900px; height: 500px;"></div>
-                    <div id="piechart1" style="width: 900px; height: 500px;"></div>
+                    <h5 class="font-bold text-center text-black">Dashboard</h5>                                      
                 </div>
+                <div id="piechart" style="width: 900px; height: 500px;"></div>
+                <div id="piechart1" style="width: 900px; height: 500px;"></div> 
             </div>
         </div>
     </div>
