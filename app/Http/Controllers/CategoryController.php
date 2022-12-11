@@ -88,10 +88,17 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(Request $request)
     {
-        $category->delete();
-
-        return redirect()->route('categories.index')->with('delete', 'The category deleted successfully.');
+        $category = Category::find($request->catergoryid);
+        if($category)
+        {
+            $category->delete();
+            return redirect()->route('categories.index')->with('delete', 'The category deleted successfully.');
+        }
+        else
+        {
+            return redirect()->route('categories.index')->with('delete', 'No category found!.');
+        }
     }
 }
