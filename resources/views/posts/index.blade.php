@@ -22,7 +22,7 @@
                     <div class="overflow-x-auto">
                         <table class="w-full text-base text-left text-gray-700 dark:text-gray-400">
                             <thead class="text-sm text-gray-800 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                <tr class="flex justify-between">
+                                <tr>
                                     <th scope="col" class="py-3 px-6">
                                         Title
                                     </th>
@@ -39,7 +39,7 @@
                             </thead>
                             <tbody>
                                 @foreach($posts as $post)
-                                <tr class="flex justify-between bg-white border-b dark:bg-gray-800 dark:border-gray-700">                                    
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">                                    
                                     <td class="py-4 px-6">
                                         {{ $post->title }}
                                     </td>

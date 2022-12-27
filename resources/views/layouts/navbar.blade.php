@@ -1,4 +1,4 @@
-<!-- component -->
+<!-- side bar -->
 <div class="flex bg-white">
 	<div class="md:flex w-2/5 md:w-1/4 h-screen sticky text-white top-0 bg-violet-500 border-r hidden">
 		<div class="mx-auto py-10">
